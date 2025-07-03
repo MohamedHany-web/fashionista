@@ -39,11 +39,23 @@ a {
   font-weight: 400;
   color: var(--secondary-color);
   font-family: "Elephant", sans-serif;
+  cursor: pointer;
 }
 .header nav ul {
   list-style: none;
   display: flex;
   gap: 50px;
+}
+.header nav ul li:not(:last-child) a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #224f34;
+  transition: width 0.3s;
+}
+.header nav ul li a:hover::after {
+  width: 100%;
 }
 .header nav ul li a {
   font-size: 1rem;
@@ -55,7 +67,12 @@ a {
   padding: 5px 30px;
   border-radius: 3px;
   margin-left: 150px;
-  border: 1px solid;
+  border: 1px solid #224f34;
+  transition: background-color 0.4s;
+}
+.header nav ul li:last-child a:hover {
+  background-color: #224f34;
+  color: #fff;
 }
 /*hero section*/
 .hero {
@@ -68,7 +85,13 @@ a {
   padding-top: 50px;
 }
 
-.hero .left-hero-content h1 {
+.hero .left-hero-content pre {
+  font-family: var(--secondary-font);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  line-height: 1.2;
   font-size: 50px;
   font-weight: 500;
   color: var(--secondary-color);
@@ -89,6 +112,10 @@ a {
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+.hero .left-hero-content a:hover {
+  background-color: #6bc785;
 }
 .hero .right-hero-content {
   width: 36%;
@@ -144,6 +171,11 @@ a {
   width: 90%;
   border-radius: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.best-selling .best-selling-items .item:hover img {
+  background-color: #224f34;
 }
 .best-selling .best-selling-items .item h3 {
   font-size: 20px;
@@ -166,6 +198,11 @@ a {
   color: var(--secondary-color);
   border: 1px solid #224f34;
   border-radius: 3px;
+  transition: background-color 0.3s;
+}
+.best-selling .container .items-see-more:hover {
+  background-color: #224f34;
+  color: #fff;
 }
 /*our products*/
 .our-products {
@@ -190,6 +227,23 @@ a {
   color: #454545;
   font-weight: 500;
   text-transform: uppercase;
+  position: relative;
+}
+.our-products .container ul li a:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #224f34;
+  transition: all 0.3s ease;
+}
+.our-products .container ul li a:hover::after {
+  width: 100%;
 }
 .our-products .container .products {
   display: flex;
@@ -201,14 +255,23 @@ a {
   text-align: center;
   width: 24%;
   margin-bottom: 45px;
+  overflow: hidden;
+}
+.our-products .products .item div {
+  overflow: hidden;
+  height: 283px;
+  margin-bottom: 20px;
 }
 .our-products .products .item img {
   background-color: #a9d4ba;
   width: 100%;
-  height: 283px;
+  height: 100%;
   border-radius: 4px;
-  margin-bottom: 20px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.our-products .products .item:hover img {
+  transform: scale(1.1);
 }
 .our-products .products .item h3 {
   font-size: 19px;
@@ -294,6 +357,10 @@ a {
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+.exclusive-offer .right-offer-content a:hover {
+  background-color: #6bc785;
 }
 /*design clothing*/
 .design-clothing {
@@ -307,6 +374,7 @@ a {
   font-weight: 500;
   font-family: var(--secondary-font);
   color: var(--secondary-color);
+  cursor: pointer;
 }
 .design-clothing .container > p {
   font-size: 17px;
@@ -362,9 +430,12 @@ a {
   padding: 15px;
   background-color: #fff;
   border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-.feedback .feedback-items .item:nth-child(2) {
+.feedback .feedback-items .item:hover {
   background-color: #c2efd4;
+  transform: translateY(-20px);
 }
 .feedback .feedback-items .item i {
   font-size: 30px;
@@ -442,6 +513,11 @@ a {
   font-weight: 400;
   color: #c2efd4;
   font-family: var(--primary-font);
+  transition: transform 0.3s ease;
+}
+.footer .shop-list ul li a:hover,
+.footer .company-list ul li a:hover {
+  transform: translateX(15px);
 }
 .footer .news-list {
   width: 30%;
@@ -461,6 +537,7 @@ a {
   background-color: transparent;
   outline: none;
   box-shadow: none;
+  color: #fff;
 }
 .footer .news-list input::placeholder {
   color: #fff;
