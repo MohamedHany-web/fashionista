@@ -34,13 +34,16 @@
       <div class="container">
         <span>Rivo</span>
         <nav>
-          <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">shop</a></li>
-            <li><a href="#">features</a></li>
-            <li><a href="#">contact</a></li>
+          <ul class="menu-list">
+            <li><a href="#home">home</a></li>
+            <li><a href="#shop">shop</a></li>
+            <li><a href="#features">features</a></li>
+            <li><a href="#contact">contact</a></li>
             <li><a href="#">login</a></li>
           </ul>
+          <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+          </div>
         </nav>
       </div>
     </header>
@@ -78,7 +81,7 @@ Fashion!</pre
           </div>
         </div>
       </section>
-      <section class="best-selling">
+      <section class="best-selling" id="home">
         <div class="container">
           <h2>Best selling</h2>
           <p>
@@ -118,7 +121,7 @@ Fashion!</pre
         </div>
       </section>
 
-      <section class="our-products">
+      <section class="our-products" id="shop">
         <div class="container">
           <h2>Our Products</h2>
           <ul>
@@ -220,7 +223,7 @@ Fashion!</pre
         </div>
       </section>
 
-      <section class="exclusive-offer">
+      <section class="exclusive-offer" id="features">
         <div class="container">
           <div class="left-offer-content">
             <img
@@ -245,7 +248,7 @@ Fashion!</pre
         </div>
       </section>
 
-      <section class="design-clothing">
+      <section class="design-clothing" id="contact">
         <div class="container">
           <h2>Designer Clothes For You</h2>
           <p>
@@ -367,5 +370,16 @@ Fashion!</pre
         </ul>
       </div>
     </footer>
+    <script>
+      let menuList = document.getElementsByClassName("menu-list")[0];
+      // menuList.style.display = "none";
+      function toggleMenu() {
+        if (menuList.style.display == "none") {
+          menuList.style.display = "flex";
+        } else {
+          menuList.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
