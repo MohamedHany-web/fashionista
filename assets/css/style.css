@@ -317,8 +317,10 @@ a {
   width: 50%;
 }
 .exclusive-offer .left-offer-content img {
-  width: 80%;
+  /* width: 80%; */
   height: 350px;
+  /* height: auto; */
+  width: auto;
   margin-bottom: 20px;
   margin-top: -25px;
 }
@@ -394,7 +396,7 @@ a {
 }
 .design-clothing .container .design-clothing-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
